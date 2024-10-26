@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilos.css">
+	
+		<link rel="stylesheet" type="text/css" >
+
+
+	<style>
+#Videosric {
+    
+background-color: #feec71;
+
+} 
+
+		#Teoriasv {
+    
+background-color: #feec71;
+
+} 
+</style>
 	<meta charset="utf-8">
 
-	<title>Árvores Nativas RS na Conservação da Biodiversidade</title>
+		
+
+	<title>Séries</title>
 </head>
+
+
+
+
+	
+
+	
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+	
+	
 <body>
 	
-<div id="menuecasavideos">
+		<div id="logovideos">
+	<img src="logoseries.png">
+</div>
 	
-<ul>
-	<li><a href="Filmesric.html">Filmes</a></li>
-	<li><a href="Livrosric.html">Livros</a></li>
-	<li><div id=""><a href="livroze.html">Ataques de Pânico</a></li>
-	<li><div id="Teoriaspsicodinâmicas"><a href="Softskills.html">Softskills</a></li>
-		<li><div id="Teoriaspsicodinâmicas"><a href="cursocerebro.html">Curso Cérebro</a></li>
-	<li><div id="Teoriaspsicodinâmicas"><a href="arvores_nativas.html">Árvores Nativas RS</br> na Conservação da </br>Biodiversidade</a></li>
-	<li><a href="Musicasric.html">Músicas</a></li>
-	<li><a href="Radiosric.html">Rádios</a></li>
-	<li><a href="Videosric.html">Videos</a></li>	
-</ul>	
-	<div id="inicio">
-	<a href="index.html"><img src="inicio.png"></a>
-</div>
-</div>
-	<div id="meiovideos">
+<div w3-include-html="contentseries.html" ></div>
+<script>
+includeHTML();
+</script>
+	
 
-<div id="livroze">
-<iframe src="arvores.pdf" width="1200" height="659" style="border: none;"></iframe>
-</div>
+	
 
 
+
+<div id="meiovideos">
+
+<div id="alem">
+<a href='alem.html'><img src="https://i.vimeocdn.com/video/{1007348803}"></br>Além da Imaginação (1959)</a>
 </div>
 
 
 
+
+</div>
 </body>
 </html>
